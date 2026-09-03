@@ -91,19 +91,19 @@ Static CSS files are served from the `public` directory with `express.static()`.
 
 ### Root
 
-| Method | Route | Response |
-| --- | --- | --- |
-| GET | `/` | Plain text: `Get root route` |
+| Method | Route | Response                     |
+| ------ | ----- | ---------------------------- |
+| GET    | `/`   | Plain text: `Get root route` |
 
 ### Users — PUG
 
-| Method | Route | Response |
-| --- | --- | --- |
-| GET | `/users` | PUG-rendered page with the list of users |
-| GET | `/users/:userId` | PUG-rendered page with details of one user |
-| POST | `/users` | Plain text: `Post users route` |
-| PUT | `/users/:userId` | Plain text containing the user ID |
-| DELETE | `/users/:userId` | Plain text containing the user ID |
+| Method | Route            | Response                                   |
+| ------ | ---------------- | ------------------------------------------ |
+| GET    | `/users`         | PUG-rendered page with the list of users   |
+| GET    | `/users/:userId` | PUG-rendered page with details of one user |
+| POST   | `/users`         | Plain text: `Post users route`             |
+| PUT    | `/users/:userId` | Plain text containing the user ID          |
+| DELETE | `/users/:userId` | Plain text containing the user ID          |
 
 Example pages:
 
@@ -116,13 +116,13 @@ An unknown user ID returns `404 User not found`.
 
 ### Articles — EJS
 
-| Method | Route | Response |
-| --- | --- | --- |
-| GET | `/articles` | EJS-rendered page with the list of articles |
-| GET | `/articles/:articleId` | EJS-rendered page with details of one article |
-| POST | `/articles` | Plain text: `Post articles route` |
-| PUT | `/articles/:articleId` | Plain text containing the article ID |
-| DELETE | `/articles/:articleId` | Plain text containing the article ID |
+| Method | Route                  | Response                                      |
+| ------ | ---------------------- | --------------------------------------------- |
+| GET    | `/articles`            | EJS-rendered page with the list of articles   |
+| GET    | `/articles/:articleId` | EJS-rendered page with details of one article |
+| POST   | `/articles`            | Plain text: `Post articles route`             |
+| PUT    | `/articles/:articleId` | Plain text containing the article ID          |
+| DELETE | `/articles/:articleId` | Plain text containing the article ID          |
 
 Example pages:
 
@@ -165,16 +165,3 @@ http://localhost:3000/articles/1
 ```
 
 The user routes are rendered by **PUG**, while the article routes are rendered by **EJS**.
-
-## Publishing to Git
-
-Create a repository and push the project:
-
-```bash
-git init
-git add .
-git commit -m "Complete lesson 62 Express templates homework"
-git branch -M main
-git remote add origin <your-repository-url>
-git push -u origin main
-```
