@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    main.container
+      nav.navigation
+        a(href='/users') Users
+        a(href='/articles') Articles
+      section.card
+        p.eyebrow PUG template
+        h1 Users
+        p.subtitle User list rendered on the server with PUG.
+        ul.item-list
+          each user in users
+            li.item
+              .item-content
+                h2= user.name
+                p #{user.email} · #{user.role}
+              a.button(href=`/users/${user.id}`) View user

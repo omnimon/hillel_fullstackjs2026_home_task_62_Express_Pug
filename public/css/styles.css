@@ -1,0 +1,154 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.navigation {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.navigation a {
+  color: #374151;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.subtitle,
+.meta,
+.article-text {
+  color: #6b7280;
+}
+
+.item-list {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+}
+
+.item h2 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.item p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.button {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #111827;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  opacity: 0.88;
+}
+
+.button.secondary {
+  margin-top: 22px;
+  color: #111827;
+  background: #e5e7eb;
+}
+
+.details {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 0;
+}
+
+.details div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.details dt {
+  margin-bottom: 4px;
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.details dd {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.article-text {
+  max-width: 68ch;
+  margin-top: 28px;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 22px;
+  }
+
+  .item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navigation">
+        <a href="/users">Users</a>
+        <a href="/articles">Articles</a>
+      </nav>
+
+      <article class="card">
+        <p class="eyebrow">EJS template</p>
+        <h1><%= article.title %></h1>
+        <p class="meta">By <%= article.author %> · Article #<%= article.id %></p>
+        <p class="article-text"><%= article.summary %></p>
+        <a class="button secondary" href="/articles">Back to articles</a>
+      </article>
+    </main>
+  </body>
+</html>

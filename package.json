@@ -1,0 +1,25 @@
+{
+  "name": "lesson-62-express-templates-homework",
+  "version": "1.0.0",
+  "description": "Express.js MVC homework demonstrating PUG templates for users and EJS templates for articles.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mvc",
+    "pug",
+    "ejs",
+    "templates"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
+  }
+}

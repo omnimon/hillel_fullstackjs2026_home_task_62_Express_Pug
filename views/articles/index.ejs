@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navigation">
+        <a href="/users">Users</a>
+        <a href="/articles">Articles</a>
+      </nav>
+
+      <section class="card">
+        <p class="eyebrow">EJS template</p>
+        <h1>Articles</h1>
+        <p class="subtitle">Article list rendered on the server with EJS.</p>
+
+        <ul class="item-list">
+          <% articles.forEach((article) => { %>
+            <li class="item">
+              <div class="item-content">
+                <h2><%= article.title %></h2>
+                <p>By <%= article.author %></p>
+              </div>
+              <a class="button" href="/articles/<%= article.id %>">Read article</a>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
